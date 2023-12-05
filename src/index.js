@@ -17,19 +17,19 @@ app.set('views', './src/views');
 
 // RUTAS
 
-// // ruta raiz http://localhost:3000
-// app.get('/',(req,res)=>{
-//     res.send("Bienvenidos")
-// })
-// // ruta http://localhost:3000/dashboard
-// app.get('/dashboard',(req,res)=>{
-//     res.send("Dashboard principal")
-// })
-// // Esta ruta debe estas al final, ya que el orden si importa
-// // rutas que no tengamos
-// app.use((req,res)=>{
-//     res.send("404 - Not Found")
-// })
+// ruta raiz http://localhost:3000
+app.get('/',(req,res)=>{
+    res.send("Bienvenidos")
+})
+// ruta http://localhost:3000/dashboard
+app.get('/dashboard',(req,res)=>{
+    res.send("Dashboard principal")
+})
+// Esta ruta debe estas al final, ya que el orden si importa
+// rutas que no tengamos
+app.use((req,res)=>{
+    res.send("404 - Not Found")
+})
 
 
 // REQUEST
