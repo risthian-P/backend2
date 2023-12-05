@@ -99,26 +99,26 @@ app.get('/hamburguesa/about',(req,res)=>{
 
 
 // middelwork
-// es necesario el express json
-app.use(express.json())
-// ruta publica
-app.get('/entrada',(req,res)=>{
-    res.send("Entrada al pedido")
-})
-// Ruta privada
-// crear un middleware
-app.use((req,res,next)=>{
-    const {email,password} = req.body
-    if (email==="example@example.com" && password==="12345"){
-        next()
-    }else{
-        res.send("Usuario no registrado")
-    }
-})
-// las rutas debajo del middleware, van a ser protegidas, ya que el orden si importa
-app.get('/pedido',(req,res)=>{
-    res.send(`Bienvenido -${req.body.email}- Listo para tomar su orden`)
-})
+// // es necesario el express json
+// app.use(express.json())
+// // ruta publica
+// app.get('/entrada',(req,res)=>{
+//     res.send("Entrada al pedido")
+// })
+// // Ruta privada
+// // crear un middleware
+// app.use((req,res,next)=>{
+//     const {email,password} = req.body
+//     if (email==="example@example.com" && password==="12345"){
+//         next()
+//     }else{
+//         res.send("Usuario no registrado")
+//     }
+// })
+// // las rutas debajo del middleware, van a ser protegidas, ya que el orden si importa
+// app.get('/pedido',(req,res)=>{
+//     res.send(`Bienvenido -${req.body.email}- Listo para tomar su orden`)
+// })
 
 
 
